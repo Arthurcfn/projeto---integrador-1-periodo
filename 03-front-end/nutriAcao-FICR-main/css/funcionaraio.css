@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+
+
+/*Corpo da Página*/
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f8f1e3;
+    background-image: url(/images/NutriAção\ -\ funcionario\ -\ fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/*Área Principal*/
+main {
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 3rem 1rem 2rem;
+    width: 100%;
+}
+
+/*Títulos da Página*/
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/*Cartões Cinza*/
+section{
+    background-color: #dcdacd;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/*Textos dentro dos cartões*/
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-size: 1.05rem;
+    margin: bottom 0.2rem;
+}
+
+p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+
+/*Primeiro cartão*/
+.rsvp {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rsvp h3 {
+    margin-bottom: 0;
+}
+
+.rsvp p {
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+}
+
+/*Botão*/
+button {
+    display: block;
+    width: 80%;
+    margin: 1.5rem auto 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2f5d27;
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #244a1f
+}
+
+/*Interruptor*/
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 3.4rem;
+    height: 1.9rem;
+    background-color: #a9a99f;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*Bolinha branca*/
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/*Estado Ligado*/
+input[type="checkbox"]:checked {
+    background-color: #34c759;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translateX(1.5rem);
+}
+
+
+/*Media query*/
+@media (min-width: 768px) {
+    /*aplica as regras de dentro apenas se a tela tiver 768px ou mais*/
+
+    body {
+        background-attachment: fixed;       /*a imagem fica fixa na janela e não estica com a altura da página*/
+        background-image:url("/images/NutriAção\ -\ computador.jpeg");      /*troca a imagem de fundo pela versão horizontal, só em telas largas*/
+        background-size:cover;      /*cobre a tela toda mantendo a proporção*/
+        background-position:center;     /*o centro da imagem fica no centro da tela*/
+    }
+
+    main {
+        max-width: 36rem;               /* conteúdo mais largo que no celular (era 24rem)*/
+        padding: 3rem 2rem;             /* mais espaço entre o conteúdo e as bordas da tela*/
+    }
+
+    h1 {
+        font-size: 2.6rem;              /* "Olá, Carlos!" maior*/
+    }
+
+    h2 {
+        font-size: 1.6rem;              /* "Confirmação de Presença" maior*/
+        margin-bottom: 2rem;            /* mais espaço antes dos cartões*/
+    }
+
+    section {
+        padding: 2rem;                  /* mais espaço interno nos cartões*/
+    }
+
+    h3 {
+        font-size: 1.6rem;              /* títulos dos cartões maiores*/
+    }
+
+    h4 {
+        font-size: 1.25rem;             /* "Prato Principal:" etc. maiores*/
+    }
+
+    p {
+        font-size: 1.1rem;              /* textos das descrições maiores*/
+    }
+
+    /*INTERRUPTOR MAIOR, mantendo as proporções*/
+    input[type="checkbox"] {
+        width: 4rem;                    /*largura do interruptor*/
+        height: 2.2rem;                 /*altura do interruptor*/
+    }
+
+    input[type="checkbox"]::before {
+        width: 1.8rem;                  /* bolinha maior */
+        height: 1.8rem;
+    }
+
+    input[type="checkbox"]:checked::before {
+        transform: translateX(1.8rem);  /*deslocamento = largura (4) - 2 margens (0,4) - bolinha (1,8)*/
+    }
+
+    button {
+        width: 60%;                     /*botão mais estreito em proporção, para não ficar gigante*/
+        padding: 1.1rem;                /*botão mais alto*/
+        font-size: 1.4rem;              /*texto do botão maior*/
+    }
+}
