@@ -11,7 +11,7 @@
 body {
     font-family:Arial, Helvetica, sans-serif;
     background-color: #f8f1e3;
-    background-image: url(/images/NutriAção\ -\ funcionario\ -\ fundo.jpg);
+   background-image: url("../images/NutriAção - funcionario - fundo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -145,7 +145,7 @@ input[type="checkbox"]:checked::before {
 
     body {
         background-attachment: fixed;       
-        background-image:url("/images/NutriAção\ -\ computador.jpeg");      
+       background-image: url("../images/NutriAção - computador.jpeg");      
         background-size:cover;     
         background-position:center;     
     }
