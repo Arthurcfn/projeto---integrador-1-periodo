@@ -10,7 +10,7 @@
 body {
     font-family: Arial, sans-serif;     
     background-color: #f8f1e3;      
-    background-image: url("/images/NutriAção\ -\ cadastro\ -\ fundo.jpg");      
+    background-image: url("../images/NutriAção - cadastro - fundo.jpg");;      
     background-size: cover;        
     background-position: center;        
     background-repeat: no-repeat;       
@@ -111,7 +111,7 @@ button:hover {
 
     body {
         background-attachment: fixed;   
-        background-image:url(/images/NutriAção\ -\ computador.jpeg);       
+        background-image: url("../images/NutriAção - computador.jpeg");      
         background-size:cover;      
         background-position:center;    
     }
